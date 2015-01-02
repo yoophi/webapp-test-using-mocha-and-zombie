@@ -3,7 +3,7 @@ var flatiron = require('flatiron'),
     nstatic = require('node-static'),
     app = flatiron.app;
 
-app.config.file({ file: path.join(__dirname, 'config', 'config.json') });
+app.config.file({file: path.join(__dirname, 'config', 'config.json')});
 
 var file = new nstatic.Server(__dirname + '/public/');
 app.use(flatiron.plugins.http, {
@@ -26,4 +26,9 @@ app.router.path('/users', require('./routes/users'));
 app.router.path('/session', require('./routes/session'));
 app.router.path('/todos', require('./routes/todos'));
 
-app.start(3000);
+
+module.exports = app;
+
+if (process.mainModule === module) {
+    app.start(3000);
+}
