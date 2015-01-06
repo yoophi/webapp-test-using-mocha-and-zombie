@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "mocha": "1.4.x",
-    "zombie": "1.4.x"
+    "zombie": "2.5.x"
   },
   "scripts": {
-    "test": "mocha test/users.js",
+    "test": "mocha --reporter spec",
     "start": "node app.js"
   },
   "name": "todo",

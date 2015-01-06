@@ -76,7 +76,7 @@ module.exports = function () {
                 var main = Plates.bind(templates.index, {
                     todo: todos
                 }, map);
-                console.log(todos);
+                //console.log(todos);
                 res.writeHead(200, {
                     'Content-Type': 'text/html'
                 });

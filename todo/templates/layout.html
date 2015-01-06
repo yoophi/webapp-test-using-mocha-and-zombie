@@ -2,17 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <title id="title"></title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
-    <section role="main" class="container">
-        <div id="messages"></div>
-        <div id="main-body"></div>
-    </section>
+<section role="main" class="container">
+    <div id="messages"></div>
+    <div id="main-body"></div>
+</section>
 
-    <script src="/js/jquery-1.11.2.min.js"></script>
-    <script src="/js/jquery-ui.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/todos.js"></script>
+<script src="/js/jquery-1.11.2.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/todos.js"></script>
+<script>
+    $(function () {
+        $.get('/users/new', function () {
+//            console.log('LOADED NEW');
+        });
+    })
+</script>
 </body>
 </html>

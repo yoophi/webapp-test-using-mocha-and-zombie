@@ -67,7 +67,7 @@ module.exports = function () {
         insert(user, this.req.body.email, function (err) {
             if (err) {
                 if (err.status_code === 409) {
-                    return res.end(laout(render(user), 'New User', {
+                    return res.end(layout(render(user), 'New User', {
                         error: 'We already have a user with that email address.'
                     }));
                 }
