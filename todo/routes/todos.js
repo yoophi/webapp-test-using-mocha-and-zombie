@@ -105,6 +105,12 @@ module.exports = function () {
                     error: 'Please fill in the To-Do description'
                 }));
             }
+
+            todo.alarm = todo.alarm === 'true';
+            todo.alarm_date = Date.parse(todo['alarm-date'] + ' ' + todo['alarm-time']);
+            delete todo['alarm-date'];
+            delete todo['alarm-time'];
+            
             todo.created_at = Date.now();
             insert(req.session.user.email, todo, function (err) {
                 if (err) {
