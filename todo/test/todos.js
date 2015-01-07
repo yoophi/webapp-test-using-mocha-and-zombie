@@ -114,6 +114,7 @@ describe('Todo list', function () {
             });
 
             it("should allow you to remove one todo item", login(function (browser, done) {
+                browser.debug = true;
                 browser.visit('http://localhost:3000/todos', function (err) {
                     if (err) throw err;
                     var expectedList = [

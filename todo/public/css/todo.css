@@ -1,0 +1,29 @@
+#alarm-date-time {
+    position: relative;
+    margin: 15px 0;
+    padding: 39px 19px 14px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: auto;
+}
+
+#alarm-date-time label {
+    display: block;
+}
+
+#alarm-date-time::after {
+    content: "Alarm Date and time";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da9a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
+}
